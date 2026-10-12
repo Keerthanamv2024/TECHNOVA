@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechNova Solutions – Premier IT Company Profile providing Web Development, Mobile Apps, Enterprise Software and Data Analytics.">
+  <title>TechNova – IT Company Profile Website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#home" class="brand-logo" aria-label="TechNova Homepage">
+        <span class="logo-badge">TN</span>
+        <span class="brand-text">Tech<span class="brand-accent">Nova</span></span>
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#why-us" class="nav-link">Why Choose Us</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <a href="{{ url_for('admin_login') }}" class="nav-admin-link">Admin Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Home / Hero Section
+         ========================================================================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>Innovating Future Tech Today</span>
+          </div>
+          <h1 class="hero-title">
+            Empowering Digital Growth With <span class="highlight">Modern IT Solutions</span>
+          </h1>
+          <p class="hero-description">
+            TechNova is a full-service technology consultancy helping enterprises and high-growth businesses design, build, and scale world-class digital products and cloud infrastructure.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="#services" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">120+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Cloud Uptime</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Enterprise Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Engineering Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         About Us Section
+         ========================================================================= -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About TechNova</span>
+          <h2 class="section-title">Driving Engineering Excellence & Sustainable Innovation</h2>
+          <p class="section-desc">
+            Founded with a passion for technological advancement, TechNova delivers end-to-end IT services that bridge business strategy and robust software engineering.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Mission Card -->
+          <article class="about-card">
+            <div class="about-icon">&#128640;</div>
+            <h3>Our Mission</h3>
+            <p>
+              To empower modern organizations by designing scalable, reliable, and secure technology solutions that solve real-world problems and fuel operational growth.
+            </p>
+          </article>
+
+          <!-- Vision Card -->
+          <article class="about-card">
+            <div class="about-icon">&#128065;</div>
+            <h3>Our Vision</h3>
+            <p>
+              To become a globally recognized IT partner known for setting benchmarks in software quality, client trust, human-centered design, and high-performance computing.
+            </p>
+          </article>
+        </div>
+
+        <!-- Core Pillars -->
+        <div class="pillars-row">
+          <div class="pillar-box">
+            <h4>01. Agility & Speed</h4>
+            <p>Iterative engineering cycles that bring ideas to market quickly and safely.</p>
+          </div>
+          <div class="pillar-box">
+            <h4>02. Security First</h4>
+            <p>Enterprise data protection and compliance embedded at every layer.</p>
+          </div>
+          <div class="pillar-box">
+            <h4>03. Client Centricity</h4>
+            <p>Dedicated engineers committed to clear communication and long-term value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Services Section
+         ========================================================================= -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Comprehensive IT Solutions Tailored for Success</h2>
+          <p class="section-desc">
+            From modern responsive web applications to enterprise cloud analytics, our capabilities span the entire digital lifecycle.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <article class="service-card">
+            <div class="service-icon-wrap">&#128187;</div>
+            <h3>Web Development</h3>
+            <p>
+              Modern, responsive, and blazing-fast web applications built with modern web standards, secure server architectures, and clean user interfaces.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">Custom Frontend & Backend</div>
+              <div class="service-feature-item">RESTful & GraphQL APIs</div>
+              <div class="service-feature-item">Performance & SEO Optimization</div>
+            </div>
+          </article>
+
+          <!-- Service 2: Mobile App Development -->
+          <article class="service-card">
+            <div class="service-icon-wrap">&#128241;</div>
+            <h3>Mobile App Development</h3>
+            <p>
+              Intuitive and cross-platform native mobile applications for iOS and Android, delivering seamless user interactions and offline capabilities.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">iOS & Android Ecosystems</div>
+              <div class="service-feature-item">Cross-Platform Solutions</div>
+              <div class="service-feature-item">Smooth Native Experiences</div>
+            </div>
+          </article>
+
+          <!-- Service 3: Software Solutions -->
+          <article class="service-card">
+            <div class="service-icon-wrap">&#9881;</div>
+            <h3>Software Solutions</h3>
+            <p>
+              Tailor-made enterprise software systems, automated workflow pipelines, and SaaS platforms engineered for high throughput and fault tolerance.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">Enterprise Resource Systems</div>
+              <div class="service-feature-item">Cloud Microservices</div>
+              <div class="service-feature-item">Legacy Modernization</div>
+            </div>
+          </article>
+
+          <!-- Service 4: Data Analytics -->
+          <article class="service-card">
+            <div class="service-icon-wrap">&#128202;</div>
+            <h3>Data Analytics</h3>
+            <p>
+              Transform complex business data into actionable visual insights with customized business intelligence dashboards and predictive models.
+            </p>
+            <div class="service-features">
+              <div class="service-feature-item">Interactive BI Dashboards</div>
+              <div class="service-feature-item">Data Pipeline Automation</div>
+              <div class="service-feature-item">Predictive Data Insights</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Projects Section
+         ========================================================================= -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Portfolio</span>
+          <h2 class="section-title">Featured Engineering Case Studies</h2>
+          <p class="section-desc">
+            Explore three recent projects where TechNova engineered transformative software solutions for modern industry challenges.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <span class="project-thumb-icon">&#9729;</span>
+              <span class="project-badge">Enterprise Cloud</span>
+            </div>
+            <div class="project-body">
+              <h3>CloudScale ERP</h3>
+              <p>
+                A high-concurrency cloud resource planning platform managing real-time inventory, automated procurement, and supply-chain logistics.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">Python Flask</span>
+                <span class="tag-pill">SQLite/PostgreSQL</span>
+                <span class="tag-pill">Cloud SaaS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <span class="project-thumb-icon">&#127973;</span>
+              <span class="project-badge">Healthcare</span>
+            </div>
+            <div class="project-body">
+              <h3>HealthSync Portal</h3>
+              <p>
+                A secure telemedicine portal facilitating encrypted doctor-patient video consultations, prescription dispatch, and electronic records.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">WebRTC</span>
+                <span class="tag-pill">REST APIs</span>
+                <span class="tag-pill">HIPAA Security</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <span class="project-thumb-icon">&#128179;</span>
+              <span class="project-badge">FinTech</span>
+            </div>
+            <div class="project-body">
+              <h3>FinEdge Analytics</h3>
+              <p>
+                An automated fraud detection dashboard analyzing millions of transactions per day with visual alerts and risk score modeling.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">Data Pipelines</span>
+                <span class="tag-pill">Chart Visualization</span>
+                <span class="tag-pill">Security</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Why Choose Us Section
+         ========================================================================= -->
+    <section id="why-us" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Value Proposition</span>
+          <h2 class="section-title">Why Partner With TechNova?</h2>
+          <p class="section-desc">
+            We combine rigorous academic standards with proven industry methodologies to guarantee success.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-number">1</div>
+            <h3>Modern Tech Stack</h3>
+            <p>
+              We build using clean, maintainable, standards-compliant architectures that prioritize security, speed, and frictionless maintainability.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">2</div>
+            <h3>Agile & On-Time Delivery</h3>
+            <p>
+              Our transparent sprint cycles, frequent client reviews, and disciplined milestone tracking ensure zero delays and zero surprises.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">3</div>
+            <h3>Dedicated 24/7 Support</h3>
+            <p>
+              Our dedicated engineering support team monitors uptime, provides rapid bug resolutions, and maintains optimal application performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Us Section
+         ========================================================================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Ready to Start Your Project?</h2>
+          <p class="section-desc">
+            Have questions or looking to collaborate? Send our engineering team an enquiry and receive a personalized consultation.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Contact Info Panel -->
+          <div class="contact-info-panel">
+            <h3>Let's Talk Technology</h3>
+            <p>
+              Fill out the form, and our lead technology consultant will respond within 24 business hours.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">&#128205;</div>
+                <div>
+                  <h5>Global Headquarters</h5>
+                  <span>TechNova Towers, Innovation Park, CA 94025</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">&#9993;</div>
+                <div>
+                  <h5>Email Address</h5>
+                  <span>contact@technova-it.com</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">&#128222;</div>
+                <div>
+                  <h5>Direct Phone</h5>
+                  <span>+1 (555) 019-2834</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">&#9200;</div>
+                <div>
+                  <h5>Working Hours</h5>
+                  <span>Monday – Friday: 9:00 AM – 6:00 PM EST</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Panel -->
+          <div class="contact-form-panel">
+            <!-- Flash Message Placeholder for Standard Submissions -->
+            <div id="formResponse">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                  {% for category, message in messages %}
+                    <div class="alert-banner alert-{{ category }}" role="alert">
+                      <span>{{ message }}</span>
+                      <button type="button" class="alert-close" aria-label="Close" onclick="this.parentElement.remove();">&times;</button>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </div>
+
+            <form id="contactForm" action="{{ url_for('contact') }}" method="POST" novalidate>
+              <div class="form-group" id="group-name">
+                <label for="name" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                <span class="form-feedback-text" id="error-name"></span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="email" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. john@example.com" required>
+                <span class="form-feedback-text" id="error-email"></span>
+              </div>
+
+              <div class="form-group" id="group-subject">
+                <label for="subject" class="form-label">Subject <span class="req">*</span></label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="e.g. Web Development Consultation" required>
+                <span class="form-feedback-text" id="error-subject"></span>
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label for="message" class="form-label">Message Details <span class="req">*</span></label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
+                <span class="form-feedback-text" id="error-message"></span>
+              </div>
+
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%;">
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-badge">TN</span>
+            <span>Tech<span class="brand-accent">Nova</span></span>
+          </div>
+          <p>
+            TechNova is a full-service technology consultancy providing dependable software solutions, web systems, and data analytics architectures for modern organizations.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Applications</a></li>
+            <li><a href="#services">Software Solutions</a></li>
+            <li><a href="#services">Data Analytics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admin & Portal</h4>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('admin_login') }}">Admin Login</a></li>
+            <li><a href="#contact">Support Desk</a></li>
+            <li><a href="#about">Company Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TechNova Solutions. All rights reserved. (College Web Programming Project)</div>
+        <div>
+          <a href="{{ url_for('admin_login') }}">Administrator Access &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

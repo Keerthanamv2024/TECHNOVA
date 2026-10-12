@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Flask & SQLite runtime artifacts
+instance/
+.webassets-cache
+technova.db
+*.db-journal
+*.db-wal
+
+# Environment variables
+.env
+.flaskenv
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

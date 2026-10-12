@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login – TechNova Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="admin-login-body">
+
+  <div class="admin-login-card">
+    <div class="admin-header">
+      <span class="admin-badge">Management Portal</span>
+      <h2>TechNova Admin</h2>
+      <p>Secure authentication for managing client enquiries</p>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert-banner alert-{{ category }}" role="alert">
+            <span>{{ message }}</span>
+            <button type="button" class="alert-close" aria-label="Close" onclick="this.parentElement.remove();">&times;</button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('admin_login') }}" method="POST">
+      <div class="form-group">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Enter admin username" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+        Sign In to Dashboard
+      </button>
+    </form>
+
+    <div class="admin-demo-box">
+      <strong>College Project Demo Credentials:</strong><br>
+      Username: <code>admin</code><br>
+      Password: <code>admin123</code><br>
+      <small style="color: #64748B;">Configurable via <code>ADMIN_USERNAME</code> and <code>ADMIN_PASSWORD</code> environment variables.</small>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+      <a href="{{ url_for('index') }}" style="color: var(--accent-purple); font-size: 0.9rem; font-weight: 600;">
+        &larr; Back to TechNova Website
+      </a>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
